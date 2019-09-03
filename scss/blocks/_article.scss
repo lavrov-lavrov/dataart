@@ -1,0 +1,150 @@
+.b-article {
+	width: calc(33% - 30px);
+	margin-bottom: 30px;
+	border-bottom: 5px solid $grey2;
+
+	@media (max-width: $large) {
+		width: calc(50% - 45px);
+	}
+
+	@media (max-width: $medium) {
+		width: calc(100% - 32px);
+	}
+
+	&.graphic {border-bottom-color: $c-graphic;}
+
+	&.music {border-bottom-color: $c-music;}
+
+	&.photography {border-bottom-color: $c-photography;}
+
+	&.cinema {border-bottom-color: $c-cinema;}
+
+	&.bussiness {border-bottom-color: $c-bussiness;}
+
+	&.travel {border-bottom-color: $c-travel;}
+
+	&.fashion {border-bottom-color: $c-fashion;}
+
+	&.more {border-bottom-color: $c-more;}
+
+	&.adver {
+		border: none;
+	}
+
+	.image {
+		position: relative;
+
+		& > img {
+			display: block;
+			width: 100%;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 46px;
+			z-index: 2;
+			border: 11px solid transparent;
+			border-bottom: 11px solid $white;
+		}
+
+		.figure {
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparentize($c-music, .2);
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
+
+			.read {
+				display: flex;
+				width: 245px;
+				align-items: center;
+				border: 4px solid transparentize($white, .1);
+				color: $white;
+
+				.icon {
+					flex: 0 0 58px;
+					height: 54px;
+					font-size: .7em;
+					line-height: 54px;
+					text-align: center;
+				}
+
+				.label {
+					padding: 0 18px 0 23px;
+					border-left: 4px solid transparentize($white, .1);
+					font-size: 1.2em;
+					line-height: 54px;
+					white-space: nowrap;
+					font-family: $f-specialBold;
+					letter-spacing: -.2px;
+				}
+			}
+		}
+
+		&:hover {
+			
+			.figure {
+				opacity: 1;
+			}
+		}
+	}
+
+	.info {
+		padding: 30px 25px;
+		border-left: 1px solid $grey2;
+		border-right: 1px solid $grey2;
+
+		@media (max-width: $medium) {
+			padding: 20px 16px;
+		}
+
+		.about {
+			display: flex;
+
+			.item {
+				display: flex;
+				align-items: center;
+				font-size: .6em;
+				color: $grey6;
+				font-family: $f-semibold;
+				letter-spacing: -.2px;
+
+				& + .item {
+					margin-left: 23px;
+				}
+
+				.label {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		.title {
+			display: inline-block;
+			margin-top: 20px;
+			font-size: 1.3em;
+			line-height: 1.304;
+			letter-spacing: -.2px;
+			font-family: $f-specialBold;
+
+			@media (max-width: $medium) {
+				font-size: 1em;
+			}
+		}
+
+		.description {
+			margin-top: 15px;
+			font-size: .7em;
+			line-height: 1.571;
+			color: $grey;
+			letter-spacing: -.2px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.g-wrapper {
+	display: flex;
+	flex: 1 0 100%;
+	flex-direction: column;
+	justify-content: stretch;
+}
+
+.g-content {
+	display: flex;
+	flex: 1;
+	align-items: stretch;
+	padding: 78px 0 0 70px;
+
+	@media (max-width: $medium) {
+		padding-top: 48px;
+	}
+}

@@ -1,0 +1,177 @@
+.b-sidebar {
+	position: fixed;
+	top: 78px;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	align-items: stretch;
+	width: 70px;
+	height: calc(100vh - 78px);
+	border-right: 1px solid $grey4;
+	background-color: $cloudy;
+
+	@media (max-width: $medium) {
+		top: 49px;
+		height: calc(100% - 38px);
+	}
+
+	.inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media only screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio : 2) {
+			overflow-y: auto;
+		}
+
+		.menu {
+
+			.item {
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				height: 69px;
+				width: 69px;
+				cursor: pointer;
+				transition: width .1s ease-in, background-color .05s ease-in-out;
+
+				.icon {
+					flex: 0 0 69px;
+					padding: 0 25px 0 20px;
+					font-size: .9em;
+					text-align: center;
+					transition: color .1s ease-in-out;
+
+					&.icon-ic-graphic {color: $c-graphic;}
+
+					&.icon-ic-music {color: $c-music;}
+
+					&.icon-ic-photography {color: $c-photography;}
+
+					&.icon-ic-cinema {color: $c-cinema;}
+
+					&.icon-ic-bussiness {color: $c-bussiness;}
+
+					&.icon-ic-travel {color: $c-travel;}
+
+					&.icon-ic-fashion {color: $c-fashion;}
+
+					&.icon-ic-more {color: $c-more;}
+				}
+
+				.label {
+					opacity: 0;
+					font-size: .7em;
+					line-height: 1.286;
+					text-transform: uppercase;
+					font-family: $f-specialBold;
+					letter-spacing: -.2px;
+					color: $white;
+					transition: opacity .25s ease-in-out;
+				}
+
+				& + .item {
+					border-top: 1px solid $grey4;
+
+					&:hover {
+						border-top-color: transparent;
+					}
+				}
+
+				&:hover {
+					width: 200px;
+					opacity: 1;
+
+					@media (max-width: $medium) {
+						width: 69px;
+					}
+
+					.label {
+						opacity: 1;
+
+						@media (max-width: $medium) {
+							opacity: 0;
+						}
+					}
+
+					.icon {
+						color: $white;
+					}
+				}
+
+				&.graphic:hover {background-color: $c-graphic;}
+
+				&.music:hover {background-color: $c-music;}
+
+				&.photography:hover {background-color: $c-photography;}
+
+				&.cinema:hover {background-color: $c-cinema;}
+
+				&.bussiness:hover {background-color: $c-bussiness;}
+
+				&.travel:hover {background-color: $c-travel;}
+
+				&.fashion:hover {background-color: $c-fashion;}
+
+				&.more:hover {background-color: $c-more;}
+			}
+		}
+
+		.settings {
+			display: flex;
+			align-items: center;
+			flex: 0 0 69px;
+			overflow: hidden;
+			height: 69px;
+			width: 69px;
+			margin-top: 2rem;
+			border-top: 1px solid $grey4;
+			border-right: 1px solid transparent;
+			background-color: $cloudy;
+			color: $grey5;
+			cursor: pointer;
+			transition: width .15s ease-in, background-color .15s ease-in-out;
+
+			@media (max-width: $medium) {
+				margin-top: 0;
+			}
+
+			.label {
+				opacity: 0;
+				font-size: .7em;
+				line-height: 1.286;
+				text-transform: uppercase;
+				font-family: $f-specialBold;
+				letter-spacing: -.2px;
+				transition: opacity .35s ease-in-out;
+			}
+
+			.icon {
+				flex: 0 0 69px;
+				padding: 0 25px 0 20px;
+				font-size: .9em;
+				text-align: center;
+				transition: color .1s ease-in-out;
+			}
+
+			&:hover {
+				width: 200px;
+				border-right-color: $grey4;
+				opacity: 1;
+
+				@media (max-width: $medium) {
+					width: 69px;
+				}
+
+				.label {
+					opacity: 1;
+
+					@media (max-width: $medium) {
+						opacity: 0;
+					}
+				}
+			}
+		}
+
+	}
+}

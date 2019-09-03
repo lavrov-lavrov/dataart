@@ -1,0 +1,8 @@
+.b-main {
+	padding: 30px;
+	flex: 0 0 100%;
+
+	@media (max-width: $medium) {
+		padding: 16px;
+	}
+}

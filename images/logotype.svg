@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17" width="19" height="17">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #e76049 } 
+	</style>
+	<g id="header">
+		<g id="logo">
+			<path id="Rectangle 2 copy" fill-rule="evenodd" class="shp0" d="M1 0.91L7.92 0.91L7.92 7.87L12.08 7.87L12.08 0.91L19 0.91L19 17L1 17L1 0.91Z" />
+		</g>
+	</g>
+</svg>
